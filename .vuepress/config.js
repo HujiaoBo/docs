@@ -2,37 +2,40 @@ const { CHAR_ZERO_WIDTH_NOBREAK_SPACE } = require("picomatch/lib/constants");
 
 module.exports = {
   title: '胡椒',
-  description: 'Just playing around',
+  description: '胡椒波的小博客',
   base: '/docs/',
+  // theme: '@vuepress/blog', // 好难看
   themeConfig: {
     logo: '/assets/img/logo.png',
     sidebar: 'auto',
+    lastUpdated: '更新于', // 最后更新时间
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Article',
         items: [
-          { text: 'FirstTest', link: '/article/first' },
-          { text: 'SecondTest', link: '/article/second' }
+          { text: 'learnVuePress', link: '/article/aboutVuePress/learnVuePress' },
+          { text: '求赞', link: '/article/second' }
         ]
       }
     ],
     sidebar: {
-      '/article/': [
+      '/article/aboutVuePress/': [
         {
-          title: '文章',
+          title: 'AboutVuePress',
           collapsable: false,
           children: [
             {
-              title: '第一个练习',
-              path: '/article/first'
-            },
-            {
-                title: '第二个练习',
-                path: '/article/second'
+              title: 'vuePress学习',
+              path: '/article/aboutVuePress/learnVuePress'
             }
           ]
+        },
+        {
+          title: '求赞',
+          path: '/article/second'
         }
       ]
     },
-  }
+  },
+  plugins: ['@vuepress/nprogress']
 }

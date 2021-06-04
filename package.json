@@ -1,5 +1,8 @@
 {
   "devDependencies": {
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "@vuepress/theme-blog": "^2.3.3",
+    "mddir": "^1.1.1",
     "vuepress": "^1.8.2"
   },
   "name": "docs",
